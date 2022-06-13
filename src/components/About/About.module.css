@@ -1,0 +1,100 @@
+@import "./../../styles/variables.css";
+.about_wrapper{
+
+    background-color: var(--bgColor);
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.thumbnail{
+    border-radius:var(--bRadius1);
+    overflow: hidden;
+    flex:0 0 41%;
+    max-width: 41%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.thumbnail .img{
+    display: block;
+    max-width: 100%;
+}
+.tab{
+    color:red;
+    border:1px solid green;
+}
+.right_area{
+    flex:0 0 59%;
+    max-width:59;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+.title_area .title{
+    font-size: var(--textXlg2);
+    color: var(--textWhite);
+    font-weight: 700;
+}
+.title_area .description{
+    color: rgba(198,201,216,.75);
+    font-size: var(--textMd);
+    font-weight: 200;
+    line-height: 30px;
+}
+.tabs_area{
+    margin-top: var(--space-8);
+}
+.tab_list{
+    display: flex;
+    margin:0 -20px;
+    
+}
+.tab_list .tab_item{
+    position: relative;
+    margin-left: var(--space-5);
+    margin-right: var(--space-5);
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 30px;
+    padding-bottom: 4px;
+    outline: none;
+    
+}
+.tab_list .tab_item::before{
+    position: absolute;
+    content: "";
+    width:30px;
+    height: 2px;
+    left:0;
+    bottom:0;
+    transition: all .7s cubic-bezier(.19,1,.22,1) 0s;
+    background: rgba(198,201,216,.75);
+
+}
+.tab_content{
+    padding-top: var(--space-5);
+  }
+
+.content_list{}
+.content_item{
+    margin-bottom: var(--space-4);
+    font-size: var(--textSm);
+    line-height: inherit;
+    font-weight: 200;
+    color: rgba(198,201,216,.75);
+    line-height: 26px;
+    
+}
+.content_link{
+    color: rgba(198,201,216,.75);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+.content_link > span{
+    font-weight: 200;
+}

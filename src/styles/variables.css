@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+
+:root{
+
+    --poppins: 'Poppins', sans-serif;
+
+    --primaryColor:#f9004d;
+    --textWhite:#FFFFFF;
+    --textColor:#c6c9d8bf;
+    --bgColorBody:#101010;
+    --bgColor: #191919;
+
+    --textXsm:14px;
+    --textSm:16px;
+    --textMd:18px;
+    --textLg:24px;
+    --textXlg:54px;
+    --textXlg2:60px;
+    --lHeight:35px;
+
+    --letterSpacing:4px;
+
+    --bRadius1 :6px;
+    --radius2 : 10px;
+    --space-4:16px;
+    --space-5:20px;
+    --space-6:24px;
+    --space-8:32px;
+    --space-10 :40px;
+    
+    --overlayGradien:linear-gradient(#f6004c 10%,#000);
+    --cardGradient:linear-gradient(90deg,#f61b10,#ef0963);
+
+    --transition1:all .3s cubic-bezier(.645,.045,.355,1);
+    --transition2:transform .28s ease;
+
+    --boxShadow:0 10px 25px 10pxrgba(0,0,0,.1);
+}

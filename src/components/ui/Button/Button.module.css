@@ -1,0 +1,32 @@
+@import "./../../../styles/variables.css";
+.btn{
+    font-family: inherit;
+    outline: none;
+    background-color: transparent;
+}
+
+.buy_btn{
+    margin-left: 50px;
+    color: var(--textWhite);
+    border: 2px solid hsla(0,0%,100%,.2);;
+    border-radius: var(--bRadius1);
+    height: 46px;
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+    line-height: 42px;
+    position: relative;
+    z-index: 2;
+    font-size: var(--textXsm);
+    font-weight: 300;
+    letter-spacing: .4px;
+    transition: var(--transition1);
+    cursor: pointer;
+}
+.buy_btn:hover{
+    border-color: var(--primaryColor);
+    transform: translateY(-3px);
+    background-color: var(--primaryColor);
+}
+.detail_btn{
+    
+}

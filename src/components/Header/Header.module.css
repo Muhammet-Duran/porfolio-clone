@@ -1,0 +1,21 @@
+@import "./../../styles/variables.css";
+
+.header_area{
+    padding-left: 50px;
+    padding-right: 50px;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+}
+.h_wrapper{
+    padding-top : var(--space-5);
+    padding-bottom : var(--space-5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_section{
+    display: flex;
+    align-items: center;
+}

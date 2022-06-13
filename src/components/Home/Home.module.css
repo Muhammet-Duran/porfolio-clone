@@ -1,0 +1,62 @@
+.home{
+    height: 950px;
+    width: 100%;
+}
+.person_image{
+    height: 100%;
+    background-image: url("assets/bg-mainUser.jpeg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person_area{
+    padding-top: 100px;
+}
+
+.person_info > span{
+    margin-bottom:var(--space-5);
+    text-transform: uppercase;
+    display: block;
+    font-size: 15px;
+    color: rgba(198,201,216,.75);
+    letter-spacing: var(--letterSpacing);
+    font-weight: 400;
+
+}
+.act_area{
+    
+}
+h1{
+    color: var(--textWhite);
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: var(--space-4);
+    width: 70%;
+}
+.act_area .textAnimate{
+    color:var(--primaryColor);
+    Font-size: 72px;
+    font-weight: 900;
+}
+.person_info > h2{
+    font-size: 54px;
+    font-weight: 700;
+    color: var(--textWhite);
+}
+
+/* .ityped-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+      50%{
+          opacity: 1;
+      }
+      100%{
+          opacity: 0;
+      }
+  } */

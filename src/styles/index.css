@@ -1,0 +1,35 @@
+@import "./reset.css";
+@import "./variables.css";
+
+html,body {
+  font-family: var(--poppins);
+  height: 100%;
+  background-color: var(--bgColorBody);
+  color: var(--textWhite);
+ 
+}
+.container{
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: var(--space-4);
+  padding-left: var(--space-4);
+}
+
+.section-wrapper{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+#root {
+  height: 100%;
+}
+.styles-module_blinkingCursor__288eE{
+color: var(--primaryColor) !important;
+}
+.react-tabs__tab--selected{
+  color: var(--primaryColor) ;
+}
+.react-tabs__tab--selected::before{
+  background-color: var(--primaryColor) !important;
+  width: 100% !important;
+}
