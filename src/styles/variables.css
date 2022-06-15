@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 
 :root{
@@ -9,6 +9,7 @@
     --primaryColor:#f9004d;
     --textWhite:#FFFFFF;
     --textColor:#c6c9d8bf;
+    --textColor2:#c6c9d8;
     --bgColorBody:#101010;
     --bgColor: #191919;
 
@@ -18,23 +19,31 @@
     --textLg:24px;
     --textXlg:54px;
     --textXlg2:60px;
+
     --lHeight:35px;
 
     --letterSpacing:4px;
 
     --bRadius1 :6px;
     --radius2 : 10px;
+
     --space-4:16px;
     --space-5:20px;
     --space-6:24px;
+    --space-7:28px;
     --space-8:32px;
+    --space-9:36px;
     --space-10 :40px;
+    --space-14:54px;
+    --space-15:60px;
     
     --overlayGradien:linear-gradient(#f6004c 10%,#000);
+    --overlayGradien2:linear-gradient(180deg,transparent 0,#000 70%);
+
     --cardGradient:linear-gradient(90deg,#f61b10,#ef0963);
 
-    --transition1:all .3s cubic-bezier(.645,.045,.355,1);
-    --transition2:transform .28s ease;
+    --transition1:all .3s ease;
+    --transition2:all .28s ease;
 
     --boxShadow:0 10px 25px 10pxrgba(0,0,0,.1);
 }

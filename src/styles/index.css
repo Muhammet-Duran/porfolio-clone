@@ -1,6 +1,31 @@
 @import "./reset.css";
 @import "./variables.css";
 
+
+@media screen and (min-width:769px){
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #191919 #404040;
+  }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width:inherit;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #64646480;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border-radius: 11px;
+    border: 0px none #6f2f2f;
+  }
+
+}
+  
 html,body {
   font-family: var(--poppins);
   height: 100%;
@@ -16,6 +41,7 @@ html,body {
   padding-left: var(--space-4);
 }
 
+
 .section-wrapper{
   padding-top: 120px;
   padding-bottom: 120px;
@@ -23,13 +49,60 @@ html,body {
 #root {
   height: 100%;
 }
+/*useTypewriter*/
 .styles-module_blinkingCursor__288eE{
 color: var(--primaryColor) !important;
 }
+
+/*tab-btn*/
 .react-tabs__tab--selected{
   color: var(--primaryColor) ;
 }
 .react-tabs__tab--selected::before{
   background-color: var(--primaryColor) !important;
   width: 100% !important;
+}
+/*nav-link*/
+.active{
+  color: var(--primaryColor) !important;
+  /* border-bottom: 1px solid red; */
+  transition: all .4s linear;
+}
+.active::before{
+  width: 100% !important;
+  transition: width .2s linear;
+}
+
+
+/*swiper js*/
+.swiper-button-next, .swiper-button-prev{ 
+  color: var(--textWhite) !important;
+
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 30px !important;
+}
+
+@media screen and (max-width:768px){
+  .container{
+    max-width: 95%;
+  }
+  .section-wrapper{
+    padding-top: var(--space-15);
+    padding-bottom: var(--space-15);
+  }
+  /*swiper js*/
+.swiper-button-next, .swiper-button-prev{ 
+  color: var(--textWhite) !important;
+
+}
+.swiper-button-next{
+  right: -5px !important;
+}
+.swiper-button-prev{
+  left: -6px !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 26px !important;
+}
 }

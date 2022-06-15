@@ -1,4 +1,4 @@
-@import "./../../styles/variables.css";
+
 .about_wrapper{
 
     background-color: var(--bgColor);
@@ -28,21 +28,11 @@
 }
 .right_area{
     flex:0 0 59%;
-    max-width:59;
+    max-width:59%;
     padding-left: 30px;
     padding-right: 10px;
 }
-.title_area .title{
-    font-size: var(--textXlg2);
-    color: var(--textWhite);
-    font-weight: 700;
-}
-.title_area .description{
-    color: rgba(198,201,216,.75);
-    font-size: var(--textMd);
-    font-weight: 200;
-    line-height: 30px;
-}
+
 .tabs_area{
     margin-top: var(--space-8);
 }
@@ -79,7 +69,7 @@
     padding-top: var(--space-5);
   }
 
-.content_list{}
+
 .content_item{
     margin-bottom: var(--space-4);
     font-size: var(--textSm);
@@ -97,4 +87,40 @@
 }
 .content_link > span{
     font-weight: 200;
+}
+
+@media screen and (max-width:991px){
+    .wrapper{
+        flex-direction: column;
+    }
+    .thumbnail{
+        flex: auto;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .right_area{
+        flex: auto;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: var(--space-9);
+    }.tabs_area{
+        margin-top: var(--space-7);
+    }
+    .tab_list{
+        margin: 0 -16px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 12px;
+    }
+    .tab_list .tab_item{
+        margin: 0 8px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .tab_content{
+        padding-top:8px;
+      }
 }

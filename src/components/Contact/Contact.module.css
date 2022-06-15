@@ -1,0 +1,102 @@
+.contact_wrapper{
+    background-color:var(--bgColor);
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    
+}
+.content_title_area{
+    text-align:left;
+    margin-bottom:50px;
+}
+.content_title_area .title{
+    font-size: var(--textXlg2);
+    margin-bottom: 8px;
+    color: var(--textWhite);
+    font-weight: 700;
+}
+
+.f_group{
+  display: inline-block;
+  width: 100%;
+}
+.f_group > input,.f_group > textarea{
+    font-family: inherit;
+    display: block;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    border:2px solid hsla(0,0%,100%,.2);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    margin-bottom: var(--space-4);
+    line-height: 46px;
+    border-radius: var(--bRadius1);
+    padding-left:var(--space-4);
+    padding-right: var(--space-4);
+    color: rgba(198,201,216,.75);
+    
+}
+
+.f_group > .f_input{
+    height: 50px;
+}
+.f_group > .f_textarea{
+    min-height: 124px;
+    max-height: 144px;
+    width: 100% !important;
+}
+
+.content_title_area > p{
+    text-align: left;
+    color: rgba(198,201,216,.75);
+    font-weight: 200;
+    font-size: var(--textMd);
+    max-width: 690px;
+    margin: 0 auto;
+    line-height: 28px;
+
+}
+.content_title_area span{
+    color: var(--textWhite);
+    font-weight: 400;
+}
+
+.wrapper .section{
+    flex: 1;
+    width: 50%;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+.section .img_area{
+    overflow: hidden;
+}
+.img_area .img{
+    display: block;
+    width: 100%;
+    border-radius: var(--bRadius1);
+}
+
+@media screen and (max-width:768px){
+    .wrapper{
+        flex-direction: column;
+    }
+    .section_thumbnail{
+        order: -1;
+    }
+    .wrapper .section{
+        width: 100%;
+        flex: auto;
+    }
+    .content_title_area .title{
+        font-size: var(--space-9);
+        font-weight: 600;
+        margin-bottom:0px;
+    }
+    .content_title_area > p{
+        font-size: var(--textSm);
+        line-height: 28px;
+    }
+}

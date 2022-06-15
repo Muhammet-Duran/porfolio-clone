@@ -1,12 +1,21 @@
-@import "./../../styles/variables.css";
+
 
 .header_area{
     padding-left: 50px;
     padding-right: 50px;
-    position: fixed;
+    background-color: transparent;
+    position: absolute;
     top:0;
     left:0;
     width: 100%;
+    z-index: 999;
+}
+.header_area.header_sticky{
+    background-color: var(--bgColor);
+    position: fixed;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    transition: all .3s ease;
+
 }
 .h_wrapper{
     padding-top : var(--space-5);
@@ -14,8 +23,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: .3s;
+}
+
+.header_area.header_sticky .h_wrapper{
+    padding-top:4px;
+    padding-bottom:4px;
 }
 .header_section{
     display: flex;
     align-items: center;
+}
+.header_section .menu_toggle{
+    display: none;
+    color: var(--textWhite);
+    position: relative;
+    z-index: 999999;
+    cursor: pointer;
+
+}
+.header_section .menu_toggle svg{
+    font-size: 32px;
+}
+@media screen and  (max-width:768px){
+    
+    .header_area{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .h_wrapper{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .header_section .menu_toggle{
+        display: inline-block;
+    }
 }

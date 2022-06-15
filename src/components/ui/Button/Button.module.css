@@ -1,32 +1,120 @@
-@import "./../../../styles/variables.css";
+
 .btn{
     font-family: inherit;
     outline: none;
     background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.buy_btn,.detail_btn{
+    color: var(--textWhite);
+    border: 2px solid hsla(0,0%,100%,.2);
+    letter-spacing: .4px;
+    font-size: var(--textXsm);
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+    font-weight: 200;
+    transition: var(--transition1);
 }
 
 .buy_btn{
     margin-left: 50px;
-    color: var(--textWhite);
-    border: 2px solid hsla(0,0%,100%,.2);;
     border-radius: var(--bRadius1);
     height: 46px;
-    padding-left: var(--space-6);
-    padding-right: var(--space-6);
     line-height: 42px;
-    position: relative;
-    z-index: 2;
-    font-size: var(--textXsm);
-    font-weight: 300;
-    letter-spacing: .4px;
-    transition: var(--transition1);
-    cursor: pointer;
+    
 }
-.buy_btn:hover{
+
+
+.detail_btn{
+    height: 40px;
+    border-radius: 4px;
+    line-height:var(--lHeight);
+    text-transform: uppercase;
+}
+.buy_btn:hover, .detail_btn:hover{
     border-color: var(--primaryColor);
     transform: translateY(-3px);
     background-color: var(--primaryColor);
 }
-.detail_btn{
-    
+.r_more_btn{
+    border: 2px solid var(--primaryColor);
+    background-color: var(--primaryColor);
+    color: var(--textWhite);
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: var(--bRadius1);
+    font-size: var(--textSm);
+    font-weight: 400;
+    transition: .3s;
+    letter-spacing: 2px;
+    height: 61px;
+    padding-left: var(--space-10);
+    padding-right: var(--space-10);
+}
+
+.blog_btn, .submit_btn{
+    text-transform: uppercase;
+    border: 2px solid var(--primaryColor);
+    color: var(--textWhite);
+    display: inline-block;
+}
+
+.blog_btn{
+    height: 40px;
+    line-height: 34px;
+    border-radius: 4px;
+    font-size: var(--textXsm);
+    font-weight: 200;
+    position: relative;
+    z-index: 99;
+    letter-spacing: .4px;
+    padding-left:var(--space-6);
+    padding-right: var(--space-6);
+    transition: var(--transition1);
+}
+
+
+.blog_btn:hover{
+    background-color: var(--primaryColor);
+    transform: translateY(-3px);
+    color: var(--textWhite);
+}
+
+.submit_btn{
+    font-size:var(--textSm);
+    letter-spacing: 2px;
+    border-radius: var(--bRadius1);
+    font-weight: 500;
+    background: var(--primaryColor);
+    height: 52px;
+    padding-left: var(--space-10);
+    padding-right: var(--space-10);
+    transition: .3s;
+}
+
+.r_more_btn:hover, .submit_btn:hover{
+    transform: translateY(-3px);
+    background-color: transparent;
+    color: var(--primaryColor);
+
+}
+
+@media screen and (max-width:768px){
+    .buy_btn{
+        display:none;
+    }
+    .r_more_btn{
+        height: 48px;
+    }
+    .blog_btn{
+        background-color: transparent;
+        transform: translateY(-3px);
+        color: var(--textWhite);
+    }
+    .submit_btn{
+        height: 40px;
+        padding-left:var(--space-7) ;
+        padding-right:var(--space-7) ;
+    }
 }

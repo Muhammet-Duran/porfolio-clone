@@ -1,6 +1,5 @@
-@import "./../../styles/variables.css";
 
-.content_title_area{
+/* .content_title_area{
     text-align: center;
     margin-bottom:30px;
 }
@@ -20,7 +19,7 @@
     padding-right:var(--space-5);
     line-height: 28px;
 
-}
+} */
 .service_grid_area{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -91,4 +90,30 @@
 }
 .service_inner:hover .description{
     color: var(--textWhite);
+}
+@media screen and (max-width:768px){
+    .service_grid_area{
+      
+        grid-template-columns:1fr;
+    }
+    .service_inner{
+        padding:  4px var(--space-4);
+        height: auto;
+    }
+
+    .service_inner::before{
+        visibility: visible;
+        opacity: 1;
+    }
+    .service_inner .title{
+        font-size: 20px;
+    }
+    .service_inner .description{
+        font-size: var(--textSm);
+    }
+}
+@media screen and (max-width:520px){
+    .service_grid_area{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
