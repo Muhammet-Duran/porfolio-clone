@@ -1,65 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import TitleArea from "components/ui/TitleArea/TitleArea";
 import styles from "./Portfolio.module.css";
 import cn from "classnames";
-import {
-  portfolioImg1,
-  portfolioImg2,
-  portfolioImg3,
-  portfolioImg4,
-} from "./../../assets/Index";
-import Button from "components/ui/Button/Button";
-const PortfolioList = [
-  {
-    id: 1,
-    image: portfolioImg1,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 2,
-    image: portfolioImg2,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 3,
-    image: portfolioImg3,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 3,
-    image: portfolioImg4,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 4,
-    image: portfolioImg1,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 5,
-    image: portfolioImg2,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-];
 
-function Portfolio() {
-  const [portfolio] = useState(PortfolioList);
+import { portfolioData } from "./../../data/Portfolios";
+import Button from "components/ui/Button/Button";
+
+function Portfolio({ page }) {
+  const [portfolio, setPortfolio] = useState([]);
+  useEffect(() => {
+    setPortfolio(portfolioData);
+  }, []);
   const sectionTitle = "My Latest Project";
   const sectionDescription =
     "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.";
+
+  const mapData = !page ? portfolio.slice(0, 6) : portfolio;
   return (
     <div id="portfolio">
       <div className={cn("section-wrapper", styles.portfolio_wrapper)}>
         <div className={cn("container", styles.wrapper)}>
-          <TitleArea title={sectionTitle} description={sectionDescription} />
+          {!page ? (
+            <TitleArea title={sectionTitle} description={sectionDescription} />
+          ) : (
+            <div className={styles.portfolio_bottom_area}>
+              <Button to="/" preferences="r_more_btn">
+                Home
+              </Button>
+            </div>
+          )}
           <div className={styles.grid_area}>
-            {portfolio.map((item) => (
+            {mapData.map((item) => (
               <div className={styles.gridItem} key={item.id}>
                 <div className={styles.portfolio}>
                   <div className={styles.item_thumbnail}>
@@ -67,6 +39,7 @@ function Portfolio() {
                       className={`${styles.thumbnail_inner} ${styles.image_1}`}
                       style={{ backgroundImage: `url(${item.image})` }}
                     ></div>
+                    <img alt="img" src={item.image} />
                     <div
                       className={`${styles.bg_blur_img} ${styles.image_1}`}
                       style={{ backgroundImage: `url(${item.image})` }}
@@ -76,16 +49,25 @@ function Portfolio() {
                     <p className={styles.branch}>{item.category}</p>
                     <h4 className={styles.portfolio_title}>{item.title}</h4>
                     <div className={styles.portfolio_btn_area}>
-                      <Button preferences="detail_btn">view details</Button>
+                      <Button
+                        to={`/project/${item.id}`}
+                        preferences="detail_btn"
+                      >
+                        view details
+                      </Button>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className={styles.portfolio_bottom_area}>
-            <Button preferences="r_more_btn">view more</Button>
-          </div>
+          {!page && (
+            <div className={styles.portfolio_bottom_area}>
+              <Button to="/project" preferences="r_more_btn">
+                view more
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>

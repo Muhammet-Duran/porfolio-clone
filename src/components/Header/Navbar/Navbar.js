@@ -4,8 +4,6 @@ import { Link } from "react-scroll";
 import { useState } from "react";
 
 function Navbar({ menuOpen, menuToggle }) {
-  console.log(menuOpen);
-  const [activeLink, setActiveLink] = useState(true);
   return (
     <nav className={`${styles.nav} ${menuOpen ? styles.nav_fixed : ""}`}>
       <ul className={styles.nav_list}>

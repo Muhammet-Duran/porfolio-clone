@@ -49,7 +49,7 @@ function Header() {
         </div>
         <div className={styles.header_section}>
           <SocialShare />
-          <Button preferences="buy_btn">BUY NOW</Button>
+          <Button preferences="buy_btn">BOOK NOW</Button>
           <div className={styles.menu_toggle}>{menuToggle}</div>
         </div>
       </div>

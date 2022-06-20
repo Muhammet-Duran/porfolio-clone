@@ -1,7 +1,7 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-import styles from "./Home.module.css";
-function Home() {
+import styles from "./Hero.module.css";
+function Hero() {
   const words = ["UX Designer", "UI Designer", "Content Writter"];
   const { text } = useTypewriter({
     words,
@@ -36,4 +36,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Hero;

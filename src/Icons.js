@@ -65,8 +65,8 @@ const ServiceIcon = ({ size }) => {
       fill="none"
       strokeWidth="1"
       viewBox="0 0 24 24"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       height={size}
       width={size}
       xmlns="http://www.w3.org/2000/svg"
@@ -83,8 +83,8 @@ const DevelopIcon = ({ size }) => {
       fill="none"
       strokeWidth="1"
       viewBox="0 0 24 24"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       height={size}
       width={size}
       xmlns="http://www.w3.org/2000/svg"
@@ -103,8 +103,8 @@ const PersonIcon = ({ size }) => {
       fill="none"
       strokeWidth="1"
       viewBox="0 0 24 24"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       height={size}
       width={size}
       xmlns="http://www.w3.org/2000/svg"
@@ -124,8 +124,8 @@ const ScreenIcon = ({ size }) => {
       fill="none"
       strokeWidth="1"
       viewBox="0 0 24 24"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       height={size}
       width={size}
       xmlns="http://www.w3.org/2000/svg"
@@ -143,8 +143,8 @@ const UpArrowIcon = ({ size }) => {
       fill="none"
       strokeWidth="2"
       viewBox="0 0 24 24"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       height={size}
       width={size}
       xmlns="http://www.w3.org/2000/svg"

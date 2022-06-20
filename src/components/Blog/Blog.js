@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "components/ui/Button/Button";
 import TitleArea from "components/ui/TitleArea/TitleArea";
-import { blogImg1, blogImg2, blogImg3 } from "./../../assets/Index";
+// import { blogImg1, blogImg2, blogImg3 } from "./../../assets/Index";
+import { blogData } from "data/Blogs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,40 +10,43 @@ import { Navigation } from "swiper";
 import styles from "./Blog.module.css";
 import cn from "classnames";
 
-const BlogList = [
-  {
-    id: 1,
-    image: blogImg1,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 2,
-    image: blogImg2,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 3,
-    image: blogImg3,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 4,
-    image: blogImg1,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-  {
-    id: 5,
-    image: blogImg2,
-    category: "Development",
-    title: "Getting tickets to the big show",
-  },
-];
+// const BlogList = [
+//   {
+//     id: 1,
+//     image: blogImg1,
+//     category: "Development",
+//     title: "Getting tickets to the big show",
+//   },
+//   {
+//     id: 2,
+//     image: blogImg2,
+//     category: "Development",
+//     title: "Getting tickets to the big show",
+//   },
+//   {
+//     id: 3,
+//     image: blogImg3,
+//     category: "Development",
+//     title: "Getting tickets to the big show",
+//   },
+//   {
+//     id: 4,
+//     image: blogImg1,
+//     category: "Development",
+//     title: "Getting tickets to the big show",
+//   },
+//   {
+//     id: 5,
+//     image: blogImg2,
+//     category: "Development",
+//     title: "Getting tickets to the big show",
+//   },
+// ];
 function Blog() {
-  const [blog] = useState(BlogList);
+  const [blog, setBlog] = useState([]);
+  useEffect(() => {
+    setBlog(blogData);
+  }, []);
   const sectionTitle = "Latest News";
   const sectionDescription =
     "There are many variations of passages of Lorem Ipsum available,but the majority have suffered alteration.";
@@ -86,7 +90,9 @@ function Blog() {
                     <p className={styles.blog_type}>{item.category}</p>
                     <h4 className={styles.b_title}>{item.title}</h4>
                     <div className={styles.blog_btn_area}>
-                      <Button preferences="blog_btn">read more</Button>
+                      <Button preferences="blog_btn" to={`/blog/${item.id}`}>
+                        read more
+                      </Button>
                     </div>
                   </div>
                 </div>

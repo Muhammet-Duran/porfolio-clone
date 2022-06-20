@@ -1,0 +1,17 @@
+.card_detail{
+    padding: 60px 20px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card_img{
+    margin: 30px auto 0; 
+    max-width: 280px; 
+}
+.card_description{
+    margin: 30px auto 0;
+    max-width: 600px;
+    font-size: 14px;
+    letter-spacing:.4px;
+    line-height:18px;
+}
