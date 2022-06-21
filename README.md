@@ -1,4 +1,4 @@
-# Movie App - [Demo](https://porfolio-clone-muhammet-duran.vercel.app/)
+# Portfolio App - [Demo](https://porfolio-clone-muhammet-duran.vercel.app/)
 
 <br>
 <br>
