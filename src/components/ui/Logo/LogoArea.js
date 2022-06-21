@@ -1,10 +1,10 @@
 import styles from "./Logo.module.css";
-import Logo from "assets/logo.png";
+import Logo from "assets/target.png";
 
 function LogoArea() {
   return (
-    <div>
-      <img src={Logo} alt="logo" />
+    <div className={styles.logo_box}>
+      <img src={Logo} alt="logo" style={{ display: "block", width: "100%" }} />
     </div>
   );
 }
